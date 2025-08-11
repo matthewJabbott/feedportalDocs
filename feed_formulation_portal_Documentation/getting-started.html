@@ -1,0 +1,377 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - Feed Formulation Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f4e6; /* Light green background */
+            color: #000000; /* Black text for secondary color */
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffff; /* White container for contrast */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #2e7d32; /* Dark green for headings */
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-top: 20px;
+            scroll-margin-top: 20px; /* For smooth scrolling */
+        }
+        h3 {
+            font-size: 1.4em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            scroll-margin-top: 20px; /* For smooth scrolling */
+        }
+        p, li {
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #000000; /* Black text */
+        }
+        pre {
+            background: #f0f8f0; /* Light green code background */
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            border: 1px solid #2e7d32; /* Dark green border */
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background: #e8f5e9; /* Very light green for inline code */
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        a {
+            color: #2e7d32; /* Dark green for links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #1b5e20; /* Slightly darker green on hover */
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .step {
+            margin-bottom: 20px;
+        }
+        .note {
+            background: #c8e6c9; /* Light green note background */
+            padding: 15px;
+            border-left: 4px solid #2e7d32; /* Dark green border */
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        .video-links {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .video-links a {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        .video-link {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .video-link img {
+            max-width: 100px;
+            max-height: 100px;
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+        
+        .video-link a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-right: 0;
+        }
+
+        .toc {
+            background: #f0f8f0;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border: 1px solid #2e7d32;
+        }
+        
+        .toc h3 {
+            margin-top: 0;
+            color: #2e7d32;
+        }
+        
+        .toc ul {
+            margin-bottom: 0;
+        }
+        
+        .toc li {
+            margin-bottom: 5px;
+        }
+        
+        .toc a {
+            font-weight: 500;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2e7d32;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .back-to-top:hover {
+            opacity: 1;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <a href="#top" class="back-to-top">↑ Top</a>
+    
+    <div class="container">
+        <div class="header" id="top">
+            <h1>Getting Started with Feed Formulation Portal</h1>
+            <p>Gopher Industries - Deakin University Capstone Project</p>
+        </div>
+
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#overview">Getting Started Overview</a></li>
+                <li><a href="#prerequisites">Prerequisites</a></li>
+                <li><a href="#developer-checklist">Developer Checklist</a></li>
+                <li><a href="#tools-overview">Tools Overview</a></li>
+                <li><a href="#clone-repository">1. Clone the Repository</a></li>
+                <li><a href="#create-branch">2. Create Your Feature Branch</a></li>
+                <li><a href="#environment-setup">3. Environment Setup</a></li>
+                <li><a href="#database-setup">4. Database Setup</a></li>
+                <li><a href="#install-dependencies">5. Install Dependencies</a></li>
+                <li><a href="#start-application">6. Start the Application</a></li>
+                <li><a href="#login-credentials">7. Login Credentials</a></li>
+            </ul>
+        </div>
+
+        <div class="note" id="overview">
+            <h3>Getting Started Overview</h3>
+            <p><strong>What You'll Learn:</strong> Once you're ready to start contributing to this project, you'll need to use tools like GitHub. Think of GitHub as a way to keep a safe copy of the entire project online. You can ask for a copy anytime, work on it, complete some extra features or fixes, and then submit your work for checking (called "merging"). This way, everyone can work together without breaking each other's code!</p>
+        </div>
+
+        <h2 id="prerequisites">Prerequisites (accounts, tools, access requests)</h2>
+        <div class="note">
+            <p><strong>What You Need Before Starting:</strong> Before you can start working on the project, you'll need access to several tools and accounts. This section covers everything you need to request or set up.</p>
+        </div>
+        <p class="step">Before getting started, ensure you have access to:</p>
+        <ul>
+            <li><strong>GitHub Account:</strong> Create a free account at <a href="https://github.com">github.com</a> and share your username with the team leads</li>
+            <li><strong>Microsoft Teams Access:</strong> Request access to the project's Teams workspace from your instructor</li>
+            <li><strong>OnTrack Account:</strong> Your university login should provide access to OnTrack for task management</li>
+            <li><strong>Development Tools:</strong> We'll install these in the next steps (Node.js, Git, MySQL, code editor)</li>
+        </ul>
+
+        <h2 id="developer-checklist">Developer Checklist</h2>
+        <div class="note">
+            <p><strong>Your Pre-Development Checklist:</strong> Use this checklist to ensure you're ready to start development. Check off each item as you complete it.</p>
+        </div>
+        <p class="step">Complete this checklist before starting development:</p>
+        <ul>
+            <li>□ GitHub account created and username shared with team</li>
+            <li>□ Added to GitHub repository with appropriate permissions</li>
+            <li>□ Microsoft Teams access granted and channels joined</li>
+            <li>□ OnTrack account accessible and project visible</li>
+            <li>□ Git installed on local machine</li>
+            <li>□ Node.js (version 16 or higher) installed</li>
+            <li>□ MySQL database server installed and running</li>
+            <li>□ Code editor installed (VS Code recommended)</li>
+            <li>□ Environment files (.env) downloaded from Teams</li>
+            <li>□ Repository cloned and dependencies installed</li>
+        </ul>
+
+        <h2 id="tools-overview">GitHub, Teams, and OnTrack Overview</h2>
+        <div class="note">
+            <p><strong>Understanding Our Tools:</strong> We use several tools to collaborate effectively. Here's what each one does and how they work together.</p>
+        </div>
+        <p class="step">Our development ecosystem uses three main tools:</p>
+        
+        <h3>GitHub - Code Repository</h3>
+        <ul>
+            <li><strong>Purpose:</strong> Store and version control all project code</li>
+            <li><strong>What you'll do:</strong> Clone repository, create branches, make commits, submit pull requests</li>
+            <li><strong>Key concept:</strong> Every change is tracked and can be reviewed before merging</li>
+        </ul>
+
+        <h3>Microsoft Teams - Communication Hub</h3>
+        <ul>
+            <li><strong>Purpose:</strong> Team communication, file sharing, meetings, and task management</li>
+            <li><strong>What you'll do:</strong> Join daily standups, share updates, access project files, use integrated Planner</li>
+            <li><strong>Key concept:</strong> Central place for all project communication and resources</li>
+        </ul>
+
+        <h3>OnTrack - Academic Progress</h3>
+        <ul>
+            <li><strong>Purpose:</strong> Academic task tracking and progress reporting for university requirements</li>
+            <li><strong>What you'll do:</strong> Log progress on assigned tasks, submit deliverables, track academic milestones</li>
+            <li><strong>Key concept:</strong> Connects your development work to academic requirements</li>
+        </ul>
+
+        <h2 id="clone-repository">1. Clone the Repository</h2>
+        <div class="note">
+            <p><strong>What is Cloning?</strong> Cloning means downloading a complete copy of the project to your computer. It's like making a photocopy of a book - you get everything: all the code files, folders, and history. This way you can work on your own copy without affecting the original.</p>
+        </div>
+        <p class="step">Start by cloning the project repository to your local machine:</p>
+        <pre><code>git clone &lt;repository-url&gt;
+cd FeedFormulationPortalV2</code></pre>
+        <div class="video-links">
+           <div class="video-link">
+                <a href="https://github.com/Gopher-Industries/FeedFormulationPortalV2">
+                    <img src="github.png" alt="Primary Repository Icon">
+                    Primary Repository
+                </a>
+            </div>
+            <div class="video-link">
+                <a href="https://deakin.au.panopto.com/Panopto/Pages/Viewer.aspx?id=2b6b31ff-d990-4dad-8660-b2e80037749d">
+                    <img src="windows_setup.png" alt="Mirror Repository Icon">
+                    Windows Setup video
+                </a>
+            </div>
+            <div class="video-link">
+               <a href="https://deakin365-my.sharepoint.com/:v:/r/personal/s224908311_deakin_edu_au/Documents/Recordings/Meeting%20in%20Feed%20Formulation%20Portal%20(T22025)-20250716_185817-Meeting%20Recording.mp4?csf=1&web=1&e=k36MZh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D">
+                   <img src="Setup_explained.png" alt="Setup Explained Icon">
+                   Setup explained
+               </a>
+            </div>
+            <div class="video-link">
+            <a href="https://teams.microsoft.com/l/meetingrecap?driveId=b%21E6gPuGlOl0Gqt_RhDMlKZehHA6aYwd9Hmw1zVJvTPAjFbtidaYtNTrjoHaviSqwm&driveItemId=01CID5QADVBRRYDMBR7ZGYICAJEEAD6H5F&sitePath=https%3A%2F%2Fdeakin365-my.sharepoint.com%2F%3Av%3A%2Fg%2Fpersonal%2Fs224235457_deakin_edu_au%2FEXUMY4GwMf5NhAgJIQA_H6UBLF1wWZjcnplJ7Q1tGiVvWQ&fileUrl=https%3A%2F%2Fdeakin365-my.sharepoint.com%2Fpersonal%2Fs224235457_deakin_edu_au%2FDocuments%2FRecordings%2FMeeting%2520in%2520Feed%2520Formulation%2520Portal%2520%28T22025%29-20250720_160657-Meeting%2520Recording.mp4%3Fweb%3D1&threadId=19%3Ae2993fc04f3d403ba3611704de943927%40thread.v2&callId=ea05ebf7-848b-49ad-9fee-aa4dddb0e1dd&threadType=GroupChat&meetingType=Unknown&subType=RecapSharingLink_RecapCore">
+                <img src="windows_setup.png" alt="Alternate Setup Video Icon">
+                Alternate video showcasing the setup
+            </a>
+            </div>
+        </div>
+
+        <h2 id="create-branch">2. Create Your Feature Branch</h2>
+        <div class="note">
+            <p><strong>What is a Branch?</strong> Think of a branch like creating a separate workspace for your changes. It's like making a copy of a document to edit while keeping the original safe. Everyone works on their own branch so they don't interfere with each other's work. When you're done, you can merge your changes back to the main project.</p>
+        </div>
+        <p class="step">Before starting work, create a new branch using the following naming convention:</p>
+        <pre><code>git checkout -b username/feature-name</code></pre>
+        <p>Example:</p>
+        <pre><code>git checkout -b kush/update-feed-api</code></pre>
+        <div class="note">
+            <p><strong>Branch Naming Convention:</strong></p>
+            <ul>
+                <li>Use your username followed by a forward slash.</li>
+                <li>Use hyphens to separate words in the feature name (not underscores).</li>
+                <li>Keep feature names descriptive but concise.</li>
+                <li>Use lowercase letters.</li>
+                <li>Include the type of change (e.g., <code>api</code>, <code>fix</code>, <code>feat</code>, <code>docs</code>).</li>
+                <li>Examples: <code>john/feat-add-user-auth</code>, <code>sarah/api-update-feed</code>, <code>mike/fix-db-connection</code>.</li>
+            </ul>
+        </div>
+
+        <h2 id="environment-setup">3. Environment Setup</h2>
+        <div class="note">
+            <p><strong>What are Environment Files?</strong> Environment files (.env) are like secret configuration files that contain passwords, database addresses, and other sensitive information. They're kept separate from the main code for security reasons. Think of them as a settings file that tells your application how to connect to databases and other services.</p>
+        </div>
+        
+        <p>Find env files from the project's Files tab in Microsoft Teams, then rename both files to <code>.env</code> and place them in their respective directories (<code>backend/</code> and <code>frontend/</code>).</p>
+        <p>Update the database credentials in <code>backend/.env</code>:</p>
+        <pre><code>DB_HOST=localhost
+DB_USER=your_username
+DB_PASSWORD=your_password
+DB_NAME=feed_portal</code></pre>
+
+        <h2 id="database-setup">4. Database Setup</h2>
+        <div class="note">
+            <p><strong>What is a Database?</strong> A database is like a digital filing cabinet where all the application's information is stored - user accounts, feed recipes, ingredients, etc. MySQL is the type of database we're using. Setting it up means creating the "filing cabinet" and organizing it with the right folders (tables) to store our data properly.</p>
+        </div>
+        <p class="step">Create a new MySQL database:</p>
+        <pre><code>CREATE DATABASE feed_portal;</code></pre>
+        <p>Set up the tables using the SQL files in <code>backend/sql/</code>:</p>
+        <ul>
+            <li>Run <code>ingredients.sql</code> to create the ingredients table.</li>
+            <li>Run <code>feeds.sql</code> to create the feeds and association tables.</li>
+        </ul>
+        <p>Use MySQL command line or a tool like MySQL Workbench:</p>
+        <pre><code>mysql -u your_username -p feed_portal &lt; backend/sql/ingredients.sql
+mysql -u your_username -p feed_portal &lt; backend/sql/feed.sql</code></pre>
+
+        <h2 id="install-dependencies">5. Install Dependencies</h2>
+        <div class="note">
+            <p><strong>What are Dependencies?</strong> Dependencies are like ingredients in a recipe - they're pre-built pieces of code that our application needs to work properly. Instead of writing everything from scratch, we use these ready-made tools (libraries) that other programmers have created. npm install downloads all these "ingredients" for us.</p>
+        </div>
+        <p class="step">Install the required dependencies for both backend and frontend:</p>
+        <p><strong>Backend:</strong></p>
+        <pre><code>cd backend
+npm install</code></pre>
+        <p><strong>Frontend:</strong></p>
+        <pre><code>cd frontend
+npm install</code></pre>
+
+        <h2 id="start-application">6. Start the Application</h2>
+        <div class="note">
+            <p><strong>Frontend vs Backend:</strong> Think of the frontend as the "face" of the application - what users see and click on (like buttons, forms, and pages). The backend is like the "brain" - it handles data, processes requests, and talks to the database. Both need to run together for the application to work completely.</p>
+        </div>
+        <p class="step">Start the backend and frontend development servers:</p>
+        <p><strong>Backend:</strong></p>
+        <pre><code>cd backend
+npm run dev</code></pre>
+        <p><strong>Frontend:</strong></p>
+        <pre><code>cd frontend
+npm start</code></pre>
+        <p>The application will be available at:</p>
+        <ul>
+            <li>Frontend: <a href="http://localhost:3000">http://localhost:3000</a></li>
+            <li>Backend API: <a href="http://localhost:5000">http://localhost:5000</a></li>
+        </ul>
+
+        <h2 id="login-credentials">7. Login Credentials</h2>
+        <p class="step">Use the following credentials to log in to the application:</p>
+        <div class="note">
+            <p><strong>Email:</strong> testuser@feedportal.com</p>
+            <p><strong>Password:</strong> O1PsEVa3I1</p>
+        </div>
+    </div>
+</body>
+
+</html>

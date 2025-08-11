@@ -10,22 +10,115 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            background-color: white;
+            background-color: #e6f4e6;
         }
-        h1 {
-            color: #006400; /* Dark green */
-            padding-bottom: 10px;
-            border-bottom: 2px solid #006400;
-        }
-        .content {
+        
+        .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        
+        h1 {
+            color: #2e7d32; /* Dark green to match getting-started */
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2e7d32;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #2e7d32;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            color: #2e7d32;
+            font-size: 1.4em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
         p {
             margin-bottom: 1.2em;
-            color: #333;
+            color: #000000;
+            font-size: 1.1em;
         }
+        
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 1.2em;
+        }
+        
+        li {
+            color: #000000;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        
+        .note {
+            background: #c8e6c9; /* Light green note background */
+            padding: 15px;
+            border-left: 4px solid #2e7d32; /* Dark green border */
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-highlight {
+            background: #f0f8f0;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border: 1px solid #2e7d32;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .tech-item {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            border: 2px solid #2e7d32;
+        }
+        
+        .tech-item h4 {
+            color: #2e7d32;
+            margin: 0 0 10px 0;
+        }
+        
+        .navigation {
+            margin-top: 30px;
+            padding: 15px;
+            background: #f0f8f0;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .navigation a {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+        
+        .navigation a:hover {
+            text-decoration: underline;
+            color: #1b5e20;
+        }
+        
         .footer {
             margin-top: 40px;
             font-size: 0.8em;
@@ -35,17 +128,103 @@
     </style>
 </head>
 <body>
-    <div class="content">
+    <div class="container">
         <h1>What is the Feed Formulation Portal?</h1>
 
-        <p>The Feed Formulation Portal is a web-based application designed to streamline and modernize feed formulation management for real-world use cases. Built as a capstone project for Deakin University, it provides an intuitive interface for users to manage ingredients, feeds, and species, and includes robust authentication, validation, and business logic suitable for production environments. It follows the MERN stack architecture (MySQL, Express.js, React.js, Node.js) and uses Clerk.js for secure authentication.</p>
+        <div class="note">
+            <p><strong>Quick Overview:</strong> The Feed Formulation Portal is a modern web application that helps users create, manage, and optimize animal feed recipes. It's like a digital cookbook for animal nutrition, where users can manage ingredients, create custom feeds for different animals, and ensure nutritional requirements are met.</p>
+        </div>
 
-        <p>This portal is intended as a reference and foundation for future student cohorts, ensuring continuity and scalability of the project.</p>
+        <p>The Feed Formulation Portal is a comprehensive web-based application designed to streamline and modernize feed formulation management for real-world use cases. Built as a capstone project for Deakin University by the Gopher Industries team, it provides an intuitive interface for users to manage ingredients, feeds, and species with robust authentication, validation, and business logic suitable for production environments.</p>
+
+        <h2>Core Features</h2>
+        <div class="feature-highlight">
+            <h3>🧪 Ingredient Management</h3>
+            <ul>
+                <li>Comprehensive ingredient database with nutritional profiles</li>
+                <li>Add, edit, and organize ingredients with detailed specifications</li>
+                <li>Track nutritional values, costs, and availability</li>
+            </ul>
+
+            <h3>🍽️ Feed Formulation</h3>
+            <ul>
+                <li>Create custom feed recipes for different animal species</li>
+                <li>Automatic nutritional calculations and optimization</li>
+                <li>Cost analysis and ingredient substitution recommendations</li>
+            </ul>
+
+            <h3>🐄 Species Management</h3>
+            <ul>
+                <li>Define nutritional requirements for different animal types</li>
+                <li>Age-specific and production-stage nutritional profiles</li>
+                <li>Customizable dietary restrictions and preferences</li>
+            </ul>
+
+            <h3>🔐 User Management & Security</h3>
+            <ul>
+                <li>Secure authentication system using Clerk.js</li>
+                <li>Role-based access control for different user types</li>
+                <li>Data validation and protection throughout the system</li>
+            </ul>
+        </div>
+
+        <h2>Technology Stack</h2>
+        <p>The portal follows modern web development practices using the MERN stack architecture:</p>
+        
+        <div class="tech-stack">
+            <div class="tech-item">
+                <h4>Frontend</h4>
+                <p>React.js for interactive user interfaces</p>
+            </div>
+            <div class="tech-item">
+                <h4>Backend</h4>
+                <p>Node.js with Express.js for server-side logic</p>
+            </div>
+            <div class="tech-item">
+                <h4>Database</h4>
+                <p>MySQL for reliable data storage</p>
+            </div>
+            <div class="tech-item">
+                <h4>Authentication</h4>
+                <p>Clerk.js for secure user management</p>
+            </div>
+        </div>
+
+        <h2>Project Purpose</h2>
+        <p>This portal serves multiple important purposes:</p>
+        <ul>
+            <li><strong>Educational Foundation:</strong> Provides a comprehensive reference for future student cohorts working on similar projects</li>
+            <li><strong>Industry Application:</strong> Demonstrates real-world software development practices and modern web technologies</li>
+            <li><strong>Scalable Architecture:</strong> Built with production-ready patterns that can be extended and maintained</li>
+            <li><strong>Collaborative Learning:</strong> Showcases effective team development workflows using GitHub, Microsoft Teams, and project management tools</li>
+        </ul>
+
+        <h2>Who Is This For?</h2>
+        <div class="note">
+            <p><strong>Target Users:</strong></p>
+            <ul>
+                <li><strong>Animal Nutritionists:</strong> Professionals who need to create balanced feed formulations</li>
+                <li><strong>Feed Manufacturers:</strong> Companies that produce commercial animal feeds</li>
+                <li><strong>Farmers and Ranchers:</strong> Individuals who want to optimize their animal feeding programs</li>
+                <li><strong>Students and Researchers:</strong> Those studying animal nutrition and feed science</li>
+                <li><strong>Future Developers:</strong> Students who will continue developing and maintaining this system</li>
+            </ul>
+        </div>
+
+        <h2>Getting Started</h2>
+        <p>Ready to start working with the Feed Formulation Portal? The development process involves several tools and steps that work together to create a smooth collaborative experience.</p>
+
+        <div class="navigation">
+            <a href="getting-started.html">→ Go to Getting Started Guide</a>
+            <a href="index.html">← Back to Documentation Menu</a>
+        </div>
 
         <div class="footer">
-            Last updated: 2025-08-06 08:45:47 UTC<br>
-            Author: matthewJamesAbbott
+            Last updated: 2025-08-11<br>
+            Gopher Industries - Deakin University Capstone Team
         </div>
     </div>
 </body>
 </html>
+
+
